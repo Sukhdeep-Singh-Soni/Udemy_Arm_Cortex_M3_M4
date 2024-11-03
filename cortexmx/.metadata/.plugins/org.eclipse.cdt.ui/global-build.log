@@ -1,0 +1,21 @@
+09:37:40 **** Incremental Build of configuration Debug for project 001_operation_modes ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "001_operation_modes.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/deep/Desktop/Udemy_Arm_Cortex_M3_M4/cortexmx/001_operation_modes/STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001_operation_modes.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 001_operation_modes.elf
+ 
+arm-none-eabi-size  001_operation_modes.elf 
+arm-none-eabi-objdump -h -S 001_operation_modes.elf  > "001_operation_modes.list"
+   text	   data	    bss	    dec	    hex	filename
+   3564	     92	   1900	   5556	   15b4	001_operation_modes.elf
+Finished building: default.size.stdout
+ 
+Finished building: 001_operation_modes.list
+ 
+09:37:48 **** Incremental Build of configuration Debug for project 001_operation_modes ****
+make -j4 all 
+arm-none-eabi-size  001_operation_modes.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3564	     92	   1900	   5556	   15b4	001_operation_modes.elf
+Finished building: default.size.stdout
+ 
