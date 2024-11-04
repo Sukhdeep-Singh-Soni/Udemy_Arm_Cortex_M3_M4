@@ -1,35 +1,21 @@
-20:18:23 **** Incremental Build of configuration Debug for project 004_t-bit ****
+21:26:46 **** Incremental Build of configuration Debug for project 005_bit_banding ****
 make -j4 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "004_t-bit.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/deep/Desktop/Udemy_Arm_Cortex_M3_M4/cortexmx/004_t-bit/STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="004_t-bit.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 004_t-bit.elf
+arm-none-eabi-gcc -o "005_bit_banding.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/deep/Desktop/Udemy_Arm_Cortex_M3_M4/cortexmx/005_bit_banding/STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="005_bit_banding.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 005_bit_banding.elf
  
-arm-none-eabi-size  004_t-bit.elf 
-arm-none-eabi-objdump -h -S 004_t-bit.elf  > "004_t-bit.list"
+arm-none-eabi-size  005_bit_banding.elf 
+arm-none-eabi-objdump -h -S 005_bit_banding.elf  > "005_bit_banding.list"
    text	   data	    bss	    dec	    hex	filename
-   3532	     92	   1900	   5524	   1594	004_t-bit.elf
+    716	      0	   1568	   2284	    8ec	005_bit_banding.elf
 Finished building: default.size.stdout
+Finished building: 005_bit_banding.list
  
-Finished building: 004_t-bit.list
  
-20:18:32 **** Incremental Build of configuration Debug for project 004_t-bit ****
+21:26:57 **** Incremental Build of configuration Debug for project 005_bit_banding ****
 make -j4 all 
-arm-none-eabi-size  004_t-bit.elf 
+arm-none-eabi-size  005_bit_banding.elf 
    text	   data	    bss	    dec	    hex	filename
-   3532	     92	   1900	   5524	   1594	004_t-bit.elf
+    716	      0	   1568	   2284	    8ec	005_bit_banding.elf
 Finished building: default.size.stdout
- 
-20:21:27 **** Incremental Build of configuration Debug for project 004_t-bit ****
-make -j4 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "004_t-bit.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/deep/Desktop/Udemy_Arm_Cortex_M3_M4/cortexmx/004_t-bit/STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="004_t-bit.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 004_t-bit.elf
- 
-arm-none-eabi-size  004_t-bit.elf 
-arm-none-eabi-objdump -h -S 004_t-bit.elf  > "004_t-bit.list"
-   text	   data	    bss	    dec	    hex	filename
-   3544	     92	   1900	   5536	   15a0	004_t-bit.elf
-Finished building: default.size.stdout
- 
-Finished building: 004_t-bit.list
  
