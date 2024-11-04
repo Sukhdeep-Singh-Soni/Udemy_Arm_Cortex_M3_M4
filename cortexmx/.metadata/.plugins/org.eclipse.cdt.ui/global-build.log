@@ -1,21 +1,17 @@
-21:26:46 **** Incremental Build of configuration Debug for project 005_bit_banding ****
+00:02:50 **** Incremental Build of configuration Debug for project 006_stack_1 ****
 make -j4 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "005_bit_banding.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/deep/Desktop/Udemy_Arm_Cortex_M3_M4/cortexmx/005_bit_banding/STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="005_bit_banding.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 005_bit_banding.elf
+../Src/main.c:23:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   23 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+arm-none-eabi-gcc -o "006_stack_1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/deep/Desktop/Udemy_Arm_Cortex_M3_M4/cortexmx/006_stack_1/STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="006_stack_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 006_stack_1.elf
  
-arm-none-eabi-size  005_bit_banding.elf 
-arm-none-eabi-objdump -h -S 005_bit_banding.elf  > "005_bit_banding.list"
+arm-none-eabi-size  006_stack_1.elf 
+arm-none-eabi-objdump -h -S 006_stack_1.elf  > "006_stack_1.list"
    text	   data	    bss	    dec	    hex	filename
-    716	      0	   1568	   2284	    8ec	005_bit_banding.elf
+   3448	     92	   1900	   5440	   1540	006_stack_1.elf
 Finished building: default.size.stdout
-Finished building: 005_bit_banding.list
  
- 
-21:26:57 **** Incremental Build of configuration Debug for project 005_bit_banding ****
-make -j4 all 
-arm-none-eabi-size  005_bit_banding.elf 
-   text	   data	    bss	    dec	    hex	filename
-    716	      0	   1568	   2284	    8ec	005_bit_banding.elf
-Finished building: default.size.stdout
+Finished building: 006_stack_1.list
  
