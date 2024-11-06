@@ -1,0 +1,20 @@
+09:14:52 **** Incremental Build of configuration Debug for project 009_exception_entry_exit ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:29:4: warning: #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use." [-Wcpp]
+   29 |   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
+      |    ^~~~~~~
+arm-none-eabi-gcc -o "009_exception_entry_exit.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/deep/Desktop/Udemy_Arm_Cortex_M3_M4/cortexmx/009_exception_entry_exit/STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="009_exception_entry_exit.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 009_exception_entry_exit.elf
+ 
+arm-none-eabi-size  009_exception_entry_exit.elf 
+arm-none-eabi-objdump -h -S 009_exception_entry_exit.elf  > "009_exception_entry_exit.list"
+   text	   data	    bss	    dec	    hex	filename
+   3532	     92	   1900	   5524	   1594	009_exception_entry_exit.elf
+Finished building: default.size.stdout
+ 
+Finished building: 009_exception_entry_exit.list
+ 
+
+09:14:54 Build Finished. 0 errors, 1 warnings. (took 1s.908ms)
+
