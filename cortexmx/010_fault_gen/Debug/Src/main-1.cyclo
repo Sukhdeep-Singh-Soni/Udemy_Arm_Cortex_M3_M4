@@ -1,0 +1,7 @@
+../Src/main-1.c:22:5:func_divide	1
+../Src/main-1.c:26:5:main	1
+../Src/main-1.c:45:6:HardFault_Handler	1
+../Src/main-1.c:50:6:MemManage_Handler	1
+../Src/main-1.c:55:6:BusFault_Handler	1
+../Src/main-1.c:60:29:UsageFault_Handler	1
+../Src/main-1.c:69:6:UsageFault_Handler_C	1
