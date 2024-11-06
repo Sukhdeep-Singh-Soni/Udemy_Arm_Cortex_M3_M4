@@ -1,52 +1,70 @@
-09:13:55 **** Build of configuration Debug for project 007_usart2_int_pend ****
+20:37:33 **** Incremental Build of configuration Debug for project 008_config_priority ****
 make -j4 all 
-arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f401retx.d" -MT"Startup/startup_stm32f401retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f401retx.o" "../Startup/startup_stm32f401retx.s"
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
-arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc -o "007_usart2_int_pend.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/deep/Desktop/Udemy_Arm_Cortex_M3_M4/cortexmx/007_usart2_int_pend/STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="007_usart2_int_pend.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 007_usart2_int_pend.elf
- 
-arm-none-eabi-size  007_usart2_int_pend.elf 
-arm-none-eabi-objdump -h -S 007_usart2_int_pend.elf  > "007_usart2_int_pend.list"
+arm-none-eabi-size  008_config_priority.elf 
    text	   data	    bss	    dec	    hex	filename
-    700	      0	   1568	   2268	    8dc	007_usart2_int_pend.elf
-Finished building: default.size.stdout
-Finished building: 007_usart2_int_pend.list
- 
- 
-09:14:07 **** Incremental Build of configuration Debug for project 007_usart2_int_pend ****
-make -j4 all 
-arm-none-eabi-size  007_usart2_int_pend.elf 
-   text	   data	    bss	    dec	    hex	filename
-    700	      0	   1568	   2268	    8dc	007_usart2_int_pend.elf
+   3572	    104	   1904	   5580	   15cc	008_config_priority.elf
 Finished building: default.size.stdout
  
-09:17:30 **** Incremental Build of configuration Debug for project 007_usart2_int_pend ****
+20:37:43 **** Incremental Build of configuration Debug for project 008_config_priority ****
+make -j4 all 
+arm-none-eabi-size  008_config_priority.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3572	    104	   1904	   5580	   15cc	008_config_priority.elf
+Finished building: default.size.stdout
+ 
+20:44:26 **** Incremental Build of configuration Debug for project 008_config_priority ****
 make -j4 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "007_usart2_int_pend.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/deep/Desktop/Udemy_Arm_Cortex_M3_M4/cortexmx/007_usart2_int_pend/STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="007_usart2_int_pend.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 007_usart2_int_pend.elf
+arm-none-eabi-gcc -o "008_config_priority.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/deep/Desktop/Udemy_Arm_Cortex_M3_M4/cortexmx/008_config_priority/STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="008_config_priority.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 008_config_priority.elf
  
-arm-none-eabi-size  007_usart2_int_pend.elf 
-arm-none-eabi-objdump -h -S 007_usart2_int_pend.elf  > "007_usart2_int_pend.list"
+arm-none-eabi-size  008_config_priority.elf 
+arm-none-eabi-objdump -h -S 008_config_priority.elf  > "008_config_priority.list"
    text	   data	    bss	    dec	    hex	filename
-   3388	     92	   1900	   5380	   1504	007_usart2_int_pend.elf
+   3568	    104	   1904	   5576	   15c8	008_config_priority.elf
 Finished building: default.size.stdout
  
-Finished building: 007_usart2_int_pend.list
+Finished building: 008_config_priority.list
  
-09:18:30 **** Incremental Build of configuration Debug for project 007_usart2_int_pend ****
+20:46:10 **** Incremental Build of configuration Debug for project 008_config_priority ****
 make -j4 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "007_usart2_int_pend.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/deep/Desktop/Udemy_Arm_Cortex_M3_M4/cortexmx/007_usart2_int_pend/STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="007_usart2_int_pend.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 007_usart2_int_pend.elf
+arm-none-eabi-gcc -o "008_config_priority.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/deep/Desktop/Udemy_Arm_Cortex_M3_M4/cortexmx/008_config_priority/STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="008_config_priority.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 008_config_priority.elf
  
-arm-none-eabi-size  007_usart2_int_pend.elf 
-arm-none-eabi-objdump -h -S 007_usart2_int_pend.elf  > "007_usart2_int_pend.list"
+arm-none-eabi-size  008_config_priority.elf 
+arm-none-eabi-objdump -h -S 008_config_priority.elf  > "008_config_priority.list"
    text	   data	    bss	    dec	    hex	filename
-   3388	     92	   1900	   5380	   1504	007_usart2_int_pend.elf
+   3588	    104	   1904	   5596	   15dc	008_config_priority.elf
 Finished building: default.size.stdout
  
-Finished building: 007_usart2_int_pend.list
+Finished building: 008_config_priority.list
+ 
+20:47:44 **** Incremental Build of configuration Debug for project 008_config_priority ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "008_config_priority.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/deep/Desktop/Udemy_Arm_Cortex_M3_M4/cortexmx/008_config_priority/STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="008_config_priority.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 008_config_priority.elf
+ 
+arm-none-eabi-size  008_config_priority.elf 
+arm-none-eabi-objdump -h -S 008_config_priority.elf  > "008_config_priority.list"
+   text	   data	    bss	    dec	    hex	filename
+   3588	    104	   1904	   5596	   15dc	008_config_priority.elf
+Finished building: default.size.stdout
+ 
+Finished building: 008_config_priority.list
+ 
+20:50:20 **** Incremental Build of configuration Debug for project 008_config_priority ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "008_config_priority.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/deep/Desktop/Udemy_Arm_Cortex_M3_M4/cortexmx/008_config_priority/STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="008_config_priority.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 008_config_priority.elf
+ 
+arm-none-eabi-size  008_config_priority.elf 
+arm-none-eabi-objdump -h -S 008_config_priority.elf  > "008_config_priority.list"
+   text	   data	    bss	    dec	    hex	filename
+   3588	    104	   1904	   5596	   15dc	008_config_priority.elf
+Finished building: default.size.stdout
+ 
+Finished building: 008_config_priority.list
  

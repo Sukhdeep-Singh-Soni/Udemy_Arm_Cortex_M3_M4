@@ -1,0 +1,4 @@
+../Src/main.c:32:6:configure_priority_for_irqs	1
+../Src/main.c:45:5:main	1
+../Src/main.c:64:6:TIM2_IRQHandler	1
+../Src/main.c:72:6:I2C1_EV_IRQHandler	1
