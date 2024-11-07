@@ -1,93 +1,35 @@
-23:57:39 **** Clean-only build of configuration Debug for project 010_fault_gen ****
-make -j4 clean 
-rm -rf ./Startup/startup_stm32f401retx.d ./Startup/startup_stm32f401retx.o
-rm -rf ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
-rm -rf 010_fault_gen.elf 010_fault_gen.list 010_fault_gen.map default.size.stdout
- 
-23:57:40 **** Incremental Build of configuration Debug for project 010_fault_gen ****
+08:59:38 **** Incremental Build of configuration Debug for project 012_svc_operation ****
 make -j4 all 
-arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f401retx.d" -MT"Startup/startup_stm32f401retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f401retx.o" "../Startup/startup_stm32f401retx.s"
-arm-none-eabi-gcc "../Src/main-1.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main-1.d" -MT"Src/main-1.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main-1.o"
-arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
-arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc -o "010_fault_gen.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/deep/Desktop/Udemy_Arm_Cortex_M3_M4/cortexmx/010_fault_gen/STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="010_fault_gen.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 010_fault_gen.elf
- 
-arm-none-eabi-size  010_fault_gen.elf 
-arm-none-eabi-objdump -h -S 010_fault_gen.elf  > "010_fault_gen.list"
-   text	   data	    bss	    dec	    hex	filename
-   5736	     92	   1900	   7728	   1e30	010_fault_gen.elf
-Finished building: default.size.stdout
- 
-Finished building: 010_fault_gen.list
- 
-23:57:59 **** Incremental Build of configuration Debug for project 010_fault_gen ****
-make -j4 all 
-arm-none-eabi-size  010_fault_gen.elf 
-   text	   data	    bss	    dec	    hex	filename
-   5736	     92	   1900	   7728	   1e30	010_fault_gen.elf
-Finished building: default.size.stdout
- 
-00:01:50 **** Incremental Build of configuration Debug for project 010_fault_gen ****
-make -j4 all 
-arm-none-eabi-gcc "../Src/main-1.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main-1.d" -MT"Src/main-1.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main-1.o"
-arm-none-eabi-gcc -o "010_fault_gen.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/deep/Desktop/Udemy_Arm_Cortex_M3_M4/cortexmx/010_fault_gen/STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="010_fault_gen.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 010_fault_gen.elf
- 
-arm-none-eabi-size  010_fault_gen.elf 
-arm-none-eabi-objdump -h -S 010_fault_gen.elf  > "010_fault_gen.list"
-   text	   data	    bss	    dec	    hex	filename
-   5736	     92	   1900	   7728	   1e30	010_fault_gen.elf
-Finished building: default.size.stdout
- 
-Finished building: 010_fault_gen.list
- 
-01:00:12 **** Clean-only build of configuration Debug for project 010_fault_gen ****
-make -j4 clean 
-rm -rf ./Startup/startup_stm32f401retx.d ./Startup/startup_stm32f401retx.o
-rm -rf ./Src/main-1.cyclo ./Src/main-1.d ./Src/main-1.o ./Src/main-1.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
-rm -rf 010_fault_gen.elf 010_fault_gen.list 010_fault_gen.map default.size.stdout
- 
-01:00:14 **** Incremental Build of configuration Debug for project 010_fault_gen ****
-make -j4 all 
-arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f401retx.d" -MT"Startup/startup_stm32f401retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f401retx.o" "../Startup/startup_stm32f401retx.s"
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
-arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc -o "010_fault_gen.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/deep/Desktop/Udemy_Arm_Cortex_M3_M4/cortexmx/010_fault_gen/STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="010_fault_gen.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 010_fault_gen.elf
+arm-none-eabi-gcc -o "012_svc_operation.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/deep/Desktop/Udemy_Arm_Cortex_M3_M4/cortexmx/012_svc_operation/STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="012_svc_operation.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 012_svc_operation.elf
  
-arm-none-eabi-size  010_fault_gen.elf 
-arm-none-eabi-objdump -h -S 010_fault_gen.elf  > "010_fault_gen.list"
+arm-none-eabi-size  012_svc_operation.elf 
+arm-none-eabi-objdump -h -S 012_svc_operation.elf  > "012_svc_operation.list"
    text	   data	    bss	    dec	    hex	filename
-   5704	     92	   1900	   7696	   1e10	010_fault_gen.elf
+   5608	     92	   1900	   7600	   1db0	012_svc_operation.elf
 Finished building: default.size.stdout
  
-Finished building: 010_fault_gen.list
+Finished building: 012_svc_operation.list
  
-01:03:54 **** Building Selected Files of configuration Debug for project 010_fault_gen ****
-Info: Internal Builder is used for build
-arm-none-eabi-gcc ../Src/main.c -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o Src/main.o 
-01:04:12 **** Clean-only build of configuration Debug for project 010_fault_gen ****
-make -j4 clean 
-rm -rf ./Startup/startup_stm32f401retx.d ./Startup/startup_stm32f401retx.o
-rm -rf ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
-rm -rf 010_fault_gen.elf 010_fault_gen.list 010_fault_gen.map default.size.stdout
- 
-01:04:14 **** Incremental Build of configuration Debug for project 010_fault_gen ****
+08:59:53 **** Incremental Build of configuration Debug for project 012_svc_operation ****
 make -j4 all 
-arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f401retx.d" -MT"Startup/startup_stm32f401retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f401retx.o" "../Startup/startup_stm32f401retx.s"
-arm-none-eabi-gcc "../Src/main-1.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main-1.d" -MT"Src/main-1.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main-1.o"
-arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
-arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc -o "010_fault_gen.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/deep/Desktop/Udemy_Arm_Cortex_M3_M4/cortexmx/010_fault_gen/STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="010_fault_gen.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 010_fault_gen.elf
- 
-arm-none-eabi-size  010_fault_gen.elf 
-arm-none-eabi-objdump -h -S 010_fault_gen.elf  > "010_fault_gen.list"
+arm-none-eabi-size  012_svc_operation.elf 
    text	   data	    bss	    dec	    hex	filename
-   5736	     92	   1900	   7728	   1e30	010_fault_gen.elf
+   5608	     92	   1900	   7600	   1db0	012_svc_operation.elf
 Finished building: default.size.stdout
  
-Finished building: 010_fault_gen.list
+09:01:11 **** Incremental Build of configuration Debug for project 012_svc_operation ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "012_svc_operation.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/deep/Desktop/Udemy_Arm_Cortex_M3_M4/cortexmx/012_svc_operation/STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="012_svc_operation.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 012_svc_operation.elf
+ 
+arm-none-eabi-size  012_svc_operation.elf 
+arm-none-eabi-objdump -h -S 012_svc_operation.elf  > "012_svc_operation.list"
+   text	   data	    bss	    dec	    hex	filename
+   5528	     92	   1900	   7520	   1d60	012_svc_operation.elf
+Finished building: default.size.stdout
+ 
+Finished building: 012_svc_operation.list
  
